@@ -38,7 +38,9 @@ Uma alternativa é instalar a ferramenta k3s da CNCF para criar e gerenciar o cl
 Execute os comandos abaixo no terminal do Ubuntu para instalar o k3s:
 
 * Acessar usuário root
-`sudo su`{{exec}}
+```bash
+sudo su
+```{{exec}}
 
 * Instalar K3S com kubectl
 ```bash
@@ -47,21 +49,30 @@ echo K3S_KUBECONFIG_MODE=\"644\" >> /etc/systemd/system/k3s.service.env
 ```{{exec}}
 
 * Restart do serviço k3s para carregar nova config
-`systemctl restart k3s`{{exec}}
+```bash
+systemctl restart k3s
+```{{exec}}
 
-Em seguida, verifique se o cluster está funcionando, executando o comando abaixo no terminal do Ubuntu para obter as informações dos nós do cluster K8S
-`kubectl get nodes`{{exec}}
+* Em seguida, verifique se o cluster está funcionando, executando o comando abaixo no terminal do Ubuntu para obter as informações dos nós do cluster K8S
+
+```bash
+kubectl get nodes
+```{{exec}}
 
 ## Criação do diretório de trabalho
+* Logar com usuário ubuntu
+```bash
+su ubuntu
+```{{exec}}
 
-Navegue para a pasta do usuário ubuntu
+* Navegar para a pasta do usuário ubuntu
 ```bash
 cd ~
 ```{{exec}}
 
-Depois, crie o diretório de trabalho para armazenar os arquivos de configuração do cluster e navegue para o diretório criado com o comando anterior.
+* Depois, crie o diretório de trabalho para armazenar os arquivos de configuração do cluster e navegue para o diretório criado com o comando anterior.
 ```bash
-mkdir k8s-cluster`{{exec}}
+mkdir k8s-cluster
 cd k8s-cluster
 ```{{exec}}
 
@@ -90,7 +101,9 @@ Para fechar e salvar, primeiro digite ctrl + X e quando as opções forem exibid
 
 ### Configuração de Persistent Volume Claims do MySQL
 * Criar o arquivo YAML com as configurações do Persistent Volume Claims
-`nano mysql-pvc.yaml`{{exec}}
+```bash
+nano mysql-pvc.yaml
+```{{exec}}
 
 ```yaml
 apiVersion: v1
@@ -223,11 +236,9 @@ spec:
 ## Definição dos Services e Ingress
 
 ### Configuração de Service para o Wordpress
-
 TBD
-
+* Cria o arquivo YAML com as configurações do Persistent Volume Claims
 ```bash
-# Cria o arquivo YAML com as configurações do Persistent Volume Claims
 nano wordpress-service.yaml
 ```{{exec}}
 
@@ -248,14 +259,11 @@ spec:
 ```{{exec}}
 
 ### Configuração de Service para o MySQL
-
 TBD
-
+* Cria o arquivo YAML com as configurações do Persistent Volume Claims
 ```bash
-# Cria o arquivo YAML com as configurações do Persistent Volume Claims
 nano mysql-service.yaml
 ```{{exec}}
-
 
 ```yaml
 apiVersion: v1
@@ -273,10 +281,7 @@ spec:
     targetPort: mysql-port
 ```{{exec}}
 
-  
-
 ### Configuração de Ingress para exposição do Wordpress
-
 TBD
 
 ```bash
@@ -302,7 +307,7 @@ spec:
               number: 80 
 ```{{exec}}
 
-```yaml
+```bash
 # Aplicar a configuração de PVC (hello-world-pvc)
 kubectl apply -f wordpress-pvc.yaml
 # Aplicar a configuração de PVC (hello-world-pvc)
@@ -317,8 +322,10 @@ kubectl apply -f wordpress-service.yaml
 kubectl apply -f mysql-service.yaml
 # Aplicar a configuração de Ingress (hello-world-ingress)
 kubectl apply -f wordpress-ingress.yaml
+```
 
 # Para aplicar todos os arquivos .yaml da pasta corrente, utilizar o seginte comando:
+```bash
 kubectl apply -f .
 ```{{exec}}
 
