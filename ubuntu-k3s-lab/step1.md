@@ -6,10 +6,7 @@ Antes de mergulharmos na configuração e execução de um cluster Kubernetes em
 ### Atualizar o sistema operacional
 Run `sudo apt-get update`{{exec}}
 
-Com esses pré-requisitos atendidos, sua VM estará pronta para iniciar a configuração do cluster Kubernetes. A seguir, exploraremos os passos detalhados para a criação e gerenciamento do seu cluster.
-
-# Configuração do Kubernetes
-## Instalação do Docker
+### Instalação do Docker
 O Kubernetes usa o Docker como mecanismo de contêiner por padrão. Verifique se o Docker está devidamente instalado na máquina virtual que está sendo usada com o seguinte comando:
 
 ```bash
@@ -19,7 +16,7 @@ docker -v
 O resultado deverá ser parecido com o exemplo abaixo, do contrário, será necessário instalar o Docker para seguir adiante.
 
 ```bash
-Docker version 20.10.22, build 3a2c30b
+Docker version 24.0.7, build 24.0.7-0ubuntu2~20.04.1
 ```
 
 Para instalar o Docker, utilize os comandos a seguir:
@@ -30,7 +27,11 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```{{exec}}
 
-### Instalação do kubeadm, kubelet e kubectl
+Com esses pré-requisitos atendidos, sua VM estará pronta para iniciar a configuração do cluster Kubernetes. A seguir, exploraremos os passos detalhados para a criação e gerenciamento do seu cluster.
+
+# Configuração do Kubernetes
+
+## Instalação do kubeadm, kubelet e kubectl
 Kubelet, kubeadm e kubectl são as ferramentas necessárias para criar e gerenciar seu cluster K8S. Através destas ferramentas é possível criar pods, deployments, services, persistent volumes, entre outros recursos utilizados em um cluster.
 
 ### Instalação do k3s
@@ -59,7 +60,7 @@ systemctl restart k3s
 kubectl get nodes
 ```{{exec}}
 
-## Criação do diretório de trabalho
+### Criação do diretório de trabalho
 * Logar com usuário ubuntu
 ```bash
 su ubuntu
@@ -95,7 +96,7 @@ spec:
   resources:
     requests:
       storage: 1Gi
-```{{copy}}
+```{{exec}}
 
 Para fechar e salvar, primeiro digite ctrl + X e quando as opções forem exibidas na parte inferior do editor Nano, digite Y e Enter.
 
@@ -119,10 +120,9 @@ spec:
   resources:
     requests:
       storage: 1Gi
-```{{copy}}
+```{{exec}}
 
 ## Configurações de deployment
-
 ### Configuração de Deployment do WordPress
 
 TBD
@@ -175,12 +175,10 @@ spec:
       securityContext:
         fsGroup: 0 
         runAsUser: 0
-```{{copy}}
-
+```{{exec}}
   
 
 ### Configuração de Deployment do MySQL
-
 TBD
 
 ```bash
@@ -190,9 +188,11 @@ nano mysql-deployment.yaml
 
 ```yaml
 apiVersion: apps/v1
-kind: StatefulSet
+#kind: StatefulSet
+kind: deployment
 metadata:
-  name: mysql-statefulset
+  name: mysql-deployment
+  #name: mysql-statefulset
   labels:
     app: mysql 
 spec:
@@ -231,7 +231,7 @@ spec:
       securityContext:
         fsGroup: 0 
         runAsUser: 0 
-```{{copy}}
+```{{exec}}
 
 ## Definição dos Services e Ingress
 
@@ -298,7 +298,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: / 
+      - path: /*
         pathType: Prefix 
         backend:
           service:
@@ -308,24 +308,24 @@ spec:
 ```{{exec}}
 
 ```bash
-# Aplicar a configuração de PVC (hello-world-pvc)
+# Aplicar a configuração de PVC (wordpress-pvc)
 kubectl apply -f wordpress-pvc.yaml
-# Aplicar a configuração de PVC (hello-world-pvc)
+# Aplicar a configuração de PVC (mysql-pvc)
 kubectl apply -f mysql-pvc.yaml
-# Aplicar a configuração de Deployment (hello-world-deployment)
+# Aplicar a configuração de Deployment (wordpress-deployment)
 kubectl apply -f wordpress-deployment.yaml
-# Aplicar a configuração de Deployment (hello-world-deployment)
+# Aplicar a configuração de Deployment (mysql-deployment)
 kubectl apply -f mysql-deployment.yaml
-# Aplicar a configuração de Service (hello-world-service)
+# Aplicar a configuração de Service (wordpress-service)
 kubectl apply -f wordpress-service.yaml
-# Aplicar a configuração de Service (hello-world-service)
+# Aplicar a configuração de Service (mysql-service)
 kubectl apply -f mysql-service.yaml
-# Aplicar a configuração de Ingress (hello-world-ingress)
+# Aplicar a configuração de Ingress (wordpress-ingress)
 kubectl apply -f wordpress-ingress.yaml
-```
+```{{exec}}
 
-# Para aplicar todos os arquivos .yaml da pasta corrente, utilizar o seginte comando:
 ```bash
+# Para aplicar todos os arquivos .yaml da pasta corrente, utilizar o seguinte comando:
 kubectl apply -f .
 ```{{exec}}
 
