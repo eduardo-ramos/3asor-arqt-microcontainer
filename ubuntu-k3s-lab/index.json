@@ -7,8 +7,28 @@
     },
     "steps": [
       {
-        "title": "Let's update our package manager repository",
+        "title": "Pré-requisitos | Atualizar o sistema operacional | Instalação do Docker",
         "text": "step1.md"
+      },
+      {
+        "title": "Configuração do ambiente Kubernetes | Instalação do kubeadm, kubelet e kubectl",
+        "text": "step2.md"
+      },
+      {
+        "title": "Configuração do ambiente Kubernetes | Configuração de Persistent Volume Claims (PVCs)",
+        "text": "step3.md"
+      },
+      {
+        "title": "Configuração do ambiente Kubernetes | Configurações de Deployment",
+        "text": "step4.md"
+      },
+      {
+        "title": "Configuração do ambiente Kubernetes | Definição dos Services e Ingress",
+        "text": "step5.md"
+      },
+      {
+        "title": "Configuração do ambiente Kubernetes | Aplicação das configurações no cluster K8S",
+        "text": "step6.md"
       }
     ],
     "finish": {

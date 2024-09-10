@@ -3,7 +3,7 @@
 Antes de mergulharmos na configuração e execução de um cluster Kubernetes em um ambiente Ubuntu Linux, é crucial estabelecer uma base sólida. Este capítulo aborda os pré-requisitos essenciais para garantir que sua máquina virtual (VM) esteja pronta para o processo.
 
 ## Pré-requisitos
-### Atualizar o sistema operacional
+### Atualizar o sistema operacional (opcional)
 Run `sudo apt-get update`{{exec}}
 
 ### Instalação do Docker
@@ -28,8 +28,8 @@ sudo systemctl start docker
 ```{{exec}}
 
 Com esses pré-requisitos atendidos, sua VM estará pronta para iniciar a configuração do cluster Kubernetes. A seguir, exploraremos os passos detalhados para a criação e gerenciamento do seu cluster.
-
-# Configuração do Kubernetes
+--- 
+# Configuração do ambiente Kubernetes
 
 ## Instalação do kubeadm, kubelet e kubectl
 Kubelet, kubeadm e kubectl são as ferramentas necessárias para criar e gerenciar seu cluster K8S. Através destas ferramentas é possível criar pods, deployments, services, persistent volumes, entre outros recursos utilizados em um cluster.
@@ -76,7 +76,8 @@ cd ~
 mkdir k8s-cluster
 cd k8s-cluster
 ```{{exec}}
-
+--- 
+# Configuração dos recursos Kubernetes
 ## Configuração de Persistent Volume Claims (PVCs)
 ### Configuração de Persistent Volume Claims do WordPress
 * Criar o arquivo YAML com as configurações do Persistent Volume Claims
@@ -121,10 +122,10 @@ spec:
     requests:
       storage: 1Gi
 ```{{exec}}
-
+--- 
+# Configuração dos recursos Kubernetes
 ## Configurações de deployment
 ### Configuração de Deployment do WordPress
-
 TBD
 
 ```bash
@@ -188,11 +189,9 @@ nano mysql-deployment.yaml
 
 ```yaml
 apiVersion: apps/v1
-#kind: StatefulSet
 kind: deployment
 metadata:
   name: mysql-deployment
-  #name: mysql-statefulset
   labels:
     app: mysql 
 spec:
@@ -232,9 +231,9 @@ spec:
         fsGroup: 0 
         runAsUser: 0 
 ```{{exec}}
-
+--- 
+# Configuração dos recursos Kubernetes
 ## Definição dos Services e Ingress
-
 ### Configuração de Service para o Wordpress
 TBD
 * Cria o arquivo YAML com as configurações do Persistent Volume Claims
@@ -298,7 +297,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /*
+      - path: /
         pathType: Prefix 
         backend:
           service:
@@ -306,7 +305,10 @@ spec:
             port:
               number: 80 
 ```{{exec}}
-
+--- 
+# Configuração dos recursos Kubernetes
+## Aplicação das configurações
+TBD
 ```bash
 # Aplicar a configuração de PVC (wordpress-pvc)
 kubectl apply -f wordpress-pvc.yaml
@@ -324,8 +326,8 @@ kubectl apply -f mysql-service.yaml
 kubectl apply -f wordpress-ingress.yaml
 ```{{exec}}
 
+Para aplicar todos os arquivos .yaml da pasta corrente, utilizar o seguinte comando:
 ```bash
-# Para aplicar todos os arquivos .yaml da pasta corrente, utilizar o seguinte comando:
 kubectl apply -f .
 ```{{exec}}
 
