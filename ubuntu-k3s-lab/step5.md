@@ -19,9 +19,8 @@ spec:
     app: wordpress 
   ports:
   - name: http-sv-port 
-    port: http-port 
-    targetPort: http-port
-```{{exec}}
+    port: 80 
+    targetPort: 80
 
 ### Configuração de Service para o MySQL
 TBD
@@ -42,8 +41,8 @@ spec:
     app: mysql 
   ports:
   - name: http-sv-port 
-    port: mysql-port 
-    targetPort: mysql-port
+    port: 3306 
+    targetPort: 3306
 ```{{exec}}
 
 ### Configuração de Ingress para exposição do Wordpress
