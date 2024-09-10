@@ -29,7 +29,7 @@ sudo apt-get install docker.io -y
 sudo systemctl enable docker
 sudo systemctl start docker
 ```{{exec}}
-```
+
 ## Instalação do kubeadm, kubelet e kubectl
 Kubelet, kubeadm e kubectl são as ferramentas necessárias para criar e gerenciar seu cluster K8S. Através destas ferramentas é possível criar pods, deployments, services, persistent volumes, entre outros recursos utilizados em um cluster.
 
