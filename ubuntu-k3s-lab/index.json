@@ -1,5 +1,5 @@
 {
-  "title": "Ubuntu K3 Custom Lab",
+  "title": "Wordpress e MySQL com Kubernetes",
   "description": "Write custom markdown for all phases",
   "details": {
     "intro": {
@@ -15,19 +15,19 @@
         "text": "step2.md"
       },
       {
-        "title": "Configuração do ambiente Kubernetes | Configuração de Persistent Volume Claims (PVCs)",
+        "title": "Configuração dos recursos Kubernetes | Configuração de Persistent Volume Claims (PVCs)",
         "text": "step3.md"
       },
       {
-        "title": "Configuração do ambiente Kubernetes | Configurações de Deployment",
+        "title": "Configuração dos recursos Kubernetes | Configurações de Deployment",
         "text": "step4.md"
       },
       {
-        "title": "Configuração do ambiente Kubernetes | Definição dos Services e Ingress",
+        "title": "Configuração dos recursos Kubernetes | Definição dos Services e Ingress",
         "text": "step5.md"
       },
       {
-        "title": "Configuração do ambiente Kubernetes | Aplicação das configurações no cluster K8S",
+        "title": "Configuração dos recursos Kubernetes | Aplicação das configurações no cluster K8S",
         "text": "step6.md"
       }
     ],

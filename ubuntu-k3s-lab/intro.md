@@ -13,6 +13,3 @@ Ao final deste cenário, você deverá ter conseguido atingir os objetivos a seg
 2. **Testes de Resiliência**:
     - [ ]     Simulação da perda de pods para testar a recuperação automática dos serviços.
     - [ ]     Verificação da integridade dos dados após a recuperação dos pods.
-4. **Scripts de IaC/Kustomize**:
-    - [ ]     Desenvolvimento de scripts de Infraestrutura como Código, se aplicável.
-    - [ ]     Teste dos scripts/módulos Kustomize para assegurar a correta funcionalidade.

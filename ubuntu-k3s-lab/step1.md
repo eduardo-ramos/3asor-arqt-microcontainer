@@ -1,4 +1,3 @@
-
 ## Pré-requisitos
 Antes de mergulharmos na configuração e execução de um cluster Kubernetes em um ambiente Ubuntu Linux, é crucial estabelecer uma base sólida. Este capítulo aborda os pré-requisitos essenciais para garantir que sua máquina virtual (VM) esteja pronta para o processo.
 

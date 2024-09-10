@@ -1,4 +1,3 @@
-# Configuração dos recursos Kubernetes
 ## Aplicação das configurações
 TBD
 ```bash

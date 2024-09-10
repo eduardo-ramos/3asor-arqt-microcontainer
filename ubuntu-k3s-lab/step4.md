@@ -1,4 +1,3 @@
-# Configuração dos recursos Kubernetes
 ## Configurações de deployment
 ### Configuração de Deployment do WordPress
 TBD
@@ -58,13 +57,13 @@ spec:
 TBD
 
 ```bash
-# Cria o arquivo YAML com as configurações do Persistent Volume Claims
+# Cria o arquivo YAML com as configurações de Deployment
 nano mysql-deployment.yaml
 ```{{exec}}
 
 ```yaml
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: mysql-deployment
   labels:

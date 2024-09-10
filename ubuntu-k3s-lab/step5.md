@@ -1,4 +1,3 @@
-# Configuração dos recursos Kubernetes
 ## Definição dos Services e Ingress
 ### Configuração de Service para o Wordpress
 TBD

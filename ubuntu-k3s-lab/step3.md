@@ -1,4 +1,3 @@
-# Configuração dos recursos Kubernetes
 ## Configuração de Persistent Volume Claims (PVCs)
 ### Configuração de Persistent Volume Claims do WordPress
 * Criar o arquivo YAML com as configurações do Persistent Volume Claims
