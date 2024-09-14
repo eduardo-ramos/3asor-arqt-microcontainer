@@ -1,6 +1,6 @@
 {
   "title": "Wordpress e MySQL com Kubernetes",
-  "description": "Write custom markdown for all phases",
+  "description": "intro.md",
   "details": {
     "intro": {
       "text": "intro.md"
