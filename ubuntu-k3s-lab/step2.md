@@ -37,6 +37,8 @@ Logar com usuário ubuntu.
 su ubuntu
 ```{{exec}}
 
+> **IMPORTANTE:** Caso solicite a senha de usuário, utilize `ubuntu`{{}}
+
 Navegar para a pasta do usuário ubuntu.
 
 ```bash

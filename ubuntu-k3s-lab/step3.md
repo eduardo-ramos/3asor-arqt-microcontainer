@@ -22,7 +22,7 @@ spec:
       storage: 1Gi
 ```{{exec}}
 
-Para fechar e salvar, primeiro digite ctrl + X (:x) e quando as opções forem exibidas na parte inferior do editor Nano, digite Y e Enter.
+Para fechar e salvar, primeiro digite ctrl + X e quando as opções forem exibidas na parte inferior do editor Nano, digite Y e Enter.
 
 ### Configuração de Persistent Volume Claims do MySQL
 Criar o arquivo YAML com as configurações do Persistent Volume Claims
