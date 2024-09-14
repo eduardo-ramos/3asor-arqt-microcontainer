@@ -1,6 +1,6 @@
 {
   "title": "Wordpress e MySQL com Kubernetes",
-  "description": "intro.md",
+  "description": "Resolução do cenário apresentado no Trabalho A, com a aplicação das instruções descritas no documento em PDF entregue em arquivos .zip.",
   "details": {
     "intro": {
       "text": "intro.md"
