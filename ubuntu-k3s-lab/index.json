@@ -29,6 +29,22 @@
       {
         "title": "Configuração dos recursos Kubernetes | Aplicação das configurações no cluster K8S",
         "text": "step6.md"
+      },
+      {
+        "title": "Testes de Resiliência | Simulação da perda de pods",
+        "text": "step7.md"
+      },
+      {
+        "title": "Testes de Resiliência | Simulação da perda de pods",
+        "text": "step8.md"
+      },
+      {
+        "title": "Testes de Resiliência | Simulação da perda de pods",
+        "text": "step9.md"
+      },
+      {
+        "title": "Testes de Resiliência | Simulação da perda de pods",
+        "text": "step10.md"
       }
     ],
     "finish": {
