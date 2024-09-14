@@ -6,7 +6,7 @@ Os Deployments são responsáveis por executar os containers Docker em um cluste
 ### Configuração de Deployment do WordPress
 
 ```bash
-# Cria o arquivo YAML com as configurações do Persistent Volume Claims
+# Cria o arquivo YAML com as configurações de Deployment para o WordPress
 nano wordpress-deployment.yaml
 ```{{exec}}
 
@@ -59,10 +59,9 @@ spec:
 > Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.
 
 ### Configuração de Deployment do MySQL
-TBD
 
 ```bash
-# Cria o arquivo YAML com as configurações de Deployment
+# Cria o arquivo YAML com as configurações de Deployment para o MySQL
 nano mysql-deployment.yaml
 ```{{exec}}
 

@@ -1,4 +1,6 @@
 ## Configuração de Persistent Volume Claims (PVCs)
+Nesta etapa serão criados os arquivos YAML com as configurações do Persistent Volume Claims (PVCs). Cada PVC é responsável por armazenar os dados e arquivos de um ou mais pods do cluster. Essas configurações são essenciais para manter a persistência e a integridade dos dados do cluster.
+
 ### Configuração de Persistent Volume Claims do WordPress
 Criar o arquivo YAML com as configurações do Persistent Volume Claims
 

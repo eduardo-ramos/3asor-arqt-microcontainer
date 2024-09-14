@@ -2,7 +2,9 @@
 Antes de mergulharmos na configuração e execução de um cluster Kubernetes em um ambiente Ubuntu Linux, é crucial estabelecer uma base sólida. Este capítulo aborda os pré-requisitos essenciais para garantir que sua máquina virtual (VM) esteja pronta para o processo.
 
 ### Atualizar o sistema operacional (opcional)
-Run `sudo apt-get update`{{exec}}
+```bash
+sudo apt-get update
+```{{exec}}
 
 ### Instalação do Docker
 O Kubernetes usa o Docker como mecanismo de contêiner por padrão. Verifique se o Docker está devidamente instalado na máquina virtual que está sendo usada com o seguinte comando:
