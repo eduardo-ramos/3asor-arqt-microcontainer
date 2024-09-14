@@ -1,7 +1,10 @@
 ## Configuração de Persistent Volume Claims (PVCs)
 ### Configuração de Persistent Volume Claims do WordPress
 * Criar o arquivo YAML com as configurações do Persistent Volume Claims
-`nano wordpress-pvc.yaml`{{exec}}
+
+```bash
+nano wordpress-pvc.yaml
+```{{exec}}
 
 ```yaml
 apiVersion: v1
