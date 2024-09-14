@@ -20,6 +20,7 @@ spec:
   - name: http-sv-port 
     port: 80 
     targetPort: 80
+```{{exec}}
 
 ### Configuração de Service para o MySQL
 TBD
