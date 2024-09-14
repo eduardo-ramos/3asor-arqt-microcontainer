@@ -40,7 +40,7 @@ wordpress-deployment-6d4c5d9689-md8cf   0/1     ContainerCreating   0          2
 wordpress-deployment-6d4c5d9689-ntpfx   0/1     ContainerCreating   0          22s
 ```{{}}
 
-[Clique aqui] {{TRAFFIC_HOST1_80}} Para acessar o WordPress.
+> Clique no link para acessar o WordPress: **{{TRAFFIC_HOST1_80}}**
 
 > **Observação:** O status _ContainerCreating_ indica que os containers Docker ainda estão sendo criados pelo cluster. Continue executando o comando `kubectl get pods`{{}} até que o status de todos mude para _Running_.
 
@@ -61,4 +61,3 @@ wordpress-deployment-6d4c5d9689-hj8s5   1/1     Running   0          62s
 wordpress-deployment-6d4c5d9689-md8cf   1/1     Running   0          62s
 wordpress-deployment-6d4c5d9689-ntpfx   1/1     Running   0          62s
 ```{{}}
-
