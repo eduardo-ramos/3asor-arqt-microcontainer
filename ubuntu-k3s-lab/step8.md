@@ -11,8 +11,7 @@ kubectl get pods | grep wordpress
 Em seguida, apagamos os pods do WordPress com o comando abaixo:
 
 ```bash
-kubectl delete pods $(kubectl get pods -o json | jq -r '.items[] | select(.metadata.name | test("wordpress-")).metadata.na
-me')
+kubectl delete pods $(kubectl get pods -o json | jq -r '.items[] | select(.metadata.name | test("wordpress-")).metadata.name')
 ```{{exec}}
 
 ### Verificação da integridade dos dados do WordPress

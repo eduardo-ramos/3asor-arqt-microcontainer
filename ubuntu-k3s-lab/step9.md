@@ -11,8 +11,7 @@ kubectl get pods | grep mysql
 Em seguida, apagamos os pods do MySQL com o comando abaixo:
 
 ```bash
-kubectl delete pods $(kubectl get pods -o json | jq -r '.items[] | select(.metadata.name | test("mysql-")).metadata.na
-me')
+kubectl delete pods $(kubectl get pods -o json | jq -r '.items[] | select(.metadata.name | test("mysql-")).metadata.name')
 ```{{exec}}
 
 ### Verificação da integridade dos dados do MySQL
