@@ -11,11 +11,7 @@ kubectl get pods
 Em seguida, apagamos todos os pods em execução com o comando abaixo:
 
 ```bash
-# Certifique-se que está na pasta de trabalho do k3s
-cd ~/k8s-cluster
-
-#Este comando exclui todos os pods com base nos arquivos de configuração
-kubectl delete -f .
+kubectl delete pods $(kubectl get pods -o json | jq -r '.items[] | select(.metadata.name).metadata.name')
 ```{{exec}}
 
 ### Verificação da integridade dos dados
