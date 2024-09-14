@@ -1,7 +1,11 @@
 ## Definição dos Services e Ingress
+Services e Ingress permitem que os usuários sejam capazes de acessar os recursos do cluster K8S.
+O Service permitem que um pod seja exposto de forma que possam ser acessados por outros pods.
+Já a configuração de Ingress permite que o acesso seja feito por um IP ou um nome de domínio.
+
 ### Configuração de Service para o Wordpress
-TBD
-* Cria o arquivo YAML com as configurações do Persistent Volume Claims
+Cria o arquivo YAML com as configurações de Service para o Wordpress.
+
 ```bash
 nano wordpress-service.yaml
 ```{{exec}}
@@ -22,9 +26,12 @@ spec:
     targetPort: 80
 ```{{exec}}
 
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.
+
 ### Configuração de Service para o MySQL
-TBD
-* Cria o arquivo YAML com as configurações do Persistent Volume Claims
+Cria o arquivo YAML com as configurações de Service para o MySQL.
+
 ```bash
 nano mysql-service.yaml
 ```{{exec}}
@@ -45,11 +52,13 @@ spec:
     targetPort: 3306
 ```{{exec}}
 
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.
+
 ### Configuração de Ingress para exposição do Wordpress
-TBD
+Cria o arquivo YAML com as configurações de Ingress para exposição do Wordpress.
 
 ```bash
-# Cria o arquivo YAML com as configurações do Persistent Volume Claims
 nano wordpress-ingress.yaml
 ```{{exec}}
 

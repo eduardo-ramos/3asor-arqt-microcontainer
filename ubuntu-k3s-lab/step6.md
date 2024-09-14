@@ -1,5 +1,6 @@
-## Aplicação das configurações
-TBD
+## Aplicação das configurações no cluster K8S
+O comando `kubectl apply`{{}} é utilizado para aplicar as configurações do cluster K8S. Para aplicar as configurações, basta executar os comando a seguir:
+
 ```bash
 # Aplicar a configuração de PVC (wordpress-pvc)
 kubectl apply -f wordpress-pvc.yaml
@@ -24,6 +25,7 @@ kubectl apply -f wordpress-ingress.yaml
 ```{{exec}}
 
 Para exibir todos os pods criados no cluster K8S, utilizar novamente o comando:
+
 ```bash
 kubectl get pods
 ```{{exec}}
@@ -36,9 +38,10 @@ mysql-deployment-6fb4446c74-4bfsg       0/1     ContainerCreating   0          2
 wordpress-deployment-6d4c5d9689-hj8s5   0/1     ContainerCreating   0          22s
 wordpress-deployment-6d4c5d9689-md8cf   0/1     ContainerCreating   0          22s
 wordpress-deployment-6d4c5d9689-ntpfx   0/1     ContainerCreating   0          22s
-```
+```{{}}
 
-Obs: O status _ContainerCreating_ indica que os containers Docker ainda estão sendo criados pelo cluster. Continue executando o comando `kubectl get pods` até que o status de todos mude para _Running_.
+> **Observação:** O status _ContainerCreating_ indica que os containers Docker ainda estão sendo criados pelo cluster. Continue executando o comando `kubectl get pods`{{}} até que o status de todos mude para _Running_.
+
 ```bash
 # Apenas um dos pods está com status Running
 ubuntu@ubuntu:~/k8s-cluster$ kubectl get pods
@@ -55,4 +58,4 @@ mysql-deployment-6fb4446c74-4bfsg       1/1     Running   0          61s
 wordpress-deployment-6d4c5d9689-hj8s5   1/1     Running   0          62s
 wordpress-deployment-6d4c5d9689-md8cf   1/1     Running   0          62s
 wordpress-deployment-6d4c5d9689-ntpfx   1/1     Running   0          62s
-```
+```{{}}

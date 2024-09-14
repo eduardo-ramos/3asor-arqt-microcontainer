@@ -1,6 +1,6 @@
 ## Configuração de Persistent Volume Claims (PVCs)
 ### Configuração de Persistent Volume Claims do WordPress
-* Criar o arquivo YAML com as configurações do Persistent Volume Claims
+Criar o arquivo YAML com as configurações do Persistent Volume Claims
 
 ```bash
 nano wordpress-pvc.yaml
@@ -22,7 +22,8 @@ spec:
       storage: 1Gi
 ```{{exec}}
 
-Para fechar e salvar, primeiro digite ctrl + X e quando as opções forem exibidas na parte inferior do editor Nano, digite Y e Enter.
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.
 
 ### Configuração de Persistent Volume Claims do MySQL
 Criar o arquivo YAML com as configurações do Persistent Volume Claims
@@ -45,3 +46,6 @@ spec:
     requests:
       storage: 1Gi
 ```{{exec}}
+
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.

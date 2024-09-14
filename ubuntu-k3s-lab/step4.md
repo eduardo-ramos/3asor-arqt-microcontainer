@@ -1,6 +1,9 @@
 ## Configurações de deployment
+Nesta etapa serão criados os arquivos YAML com as configurações do Deployment do Kubernetes.
+Os Deployments são responsáveis por executar os containers Docker em um cluster.
+É atraves deles que são configurados a imagem de um container, as configurações de rede (quando houver), configuração de volumes, variávis de ambiente e entre outros. 
+
 ### Configuração de Deployment do WordPress
-TBD
 
 ```bash
 # Cria o arquivo YAML com as configurações do Persistent Volume Claims
@@ -52,6 +55,8 @@ spec:
         runAsUser: 0
 ```{{exec}}
   
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.
 
 ### Configuração de Deployment do MySQL
 TBD
@@ -105,3 +110,5 @@ spec:
         fsGroup: 0 
         runAsUser: 0 
 ```{{exec}}
+> Para fechar e salvar um arquivo no editor Nano, primeiro digite **CTRL + X** e quando as opções forem exibidas na parte inferior do editor, digite **Y** e em seguida **Enter**.
+> Antes de salvar os arquivos no editor Nano, certifique-se que o foco do cursor está ativo no editor.

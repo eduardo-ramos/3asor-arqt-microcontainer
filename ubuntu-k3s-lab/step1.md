@@ -31,5 +31,4 @@ sudo systemctl start docker
 
 </details>
 <br>
-{{:x}}
 Com esses pré-requisitos atendidos, sua VM estará pronta para iniciar a configuração do cluster Kubernetes. A seguir, exploraremos os passos detalhados para a criação e gerenciamento do seu cluster.

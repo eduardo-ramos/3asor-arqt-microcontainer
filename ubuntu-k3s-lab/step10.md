@@ -1,5 +1,8 @@
 # Testes de Resiliência
 ### Simulação da perda de todos os pods simultâneamente
+Finalmente, a simulação da perda de todos os pods simultâneamente tem por objetivo garantir que o Wordpress e o MySQL continuem funcionando normalmente após a perda de todos os seus pods.
+Neste teste, apagamos todos os pods em execução do cluster. Mesmo que os pods sejam deletados, estes devem se restabelecer automaticamente, de forma que o Wordpress e o MySQL continuem funcionando normalmente.
+
 Liste todos os pods em execução no cluster, sem aplicar nenhum filtro dessa.
 
 ```bash
