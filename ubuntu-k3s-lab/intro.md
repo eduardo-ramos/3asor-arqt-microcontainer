@@ -4,7 +4,6 @@ Você foi contratado para atuar no time DevOps, com a responsabilidade de provis
 
 Para isso, você deverá criar todas as configurações Kubernetes necessárias para provisionamento do Wordpress e MySQL, utilizando alguma plataforma para execução de clusters Kubernetes, como microk8s, k3s, EKS da AWS, GKE do Google Cloud (GCP), entre outros, permitindo instanciar todos pods, services, ingress e configurações adicionais necessárias, garantindo que mesmo ao destruir um pod Wordpress e/ou MySQL, os dados de configuração do ambiente Wordpress não sejam perdidos.
 
-## Checklist de entrega
 Ao final deste cenário, você deverá ter conseguido atingir os objetivos a seguir:
 1. **Configuração do Kubernetes**:
     - [ ]     Criação dos arquivos YAML para deployment do Wordpress e MySQL.

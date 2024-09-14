@@ -1,6 +1,4 @@
 # Testes de Resiliência
-TBD.
-
 ### Simulação da perda dos pods do MySQL
 Liste os pods em execução no cluster, dessa vez filtrando pelos pods do MySQL.
 

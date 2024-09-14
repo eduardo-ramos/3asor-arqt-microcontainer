@@ -25,7 +25,7 @@ spec:
 Para fechar e salvar, primeiro digite ctrl + X e quando as opções forem exibidas na parte inferior do editor Nano, digite Y e Enter.
 
 ### Configuração de Persistent Volume Claims do MySQL
-* Criar o arquivo YAML com as configurações do Persistent Volume Claims
+Criar o arquivo YAML com as configurações do Persistent Volume Claims
 ```bash
 nano mysql-pvc.yaml
 ```{{exec}}

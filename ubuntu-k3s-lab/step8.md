@@ -1,7 +1,5 @@
 # Testes de Resiliência
-TBD.
-
-### Simulação da perda dos pods do WordPress
+## Simulação da perda dos pods do WordPress
 Primeiramente, listamos todos os pods em execução no cluster, filtrando pelos pods do WordPress.
 
 ```bash

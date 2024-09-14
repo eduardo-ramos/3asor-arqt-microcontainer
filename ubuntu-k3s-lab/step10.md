@@ -1,6 +1,4 @@
 # Testes de Resiliência
-TBD.
-
 ### Simulação da perda de todos os pods simultâneamente
 Liste todos os pods em execução no cluster, sem aplicar nenhum filtro dessa.
 

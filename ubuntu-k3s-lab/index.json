@@ -1,6 +1,6 @@
 {
   "title": "Wordpress e MySQL com Kubernetes",
-  "description": "Resolução do cenário apresentado no Trabalho A, com a aplicação das instruções descritas no documento em PDF entregue em arquivos .zip.",
+  "description": "Resolução do cenário apresentado no Trabalho A, utilizando a ferramenta k3s para a aplicação das instruções descritas no documento em PDF entregue no pacote .zip.",
   "details": {
     "intro": {
       "text": "intro.md"
